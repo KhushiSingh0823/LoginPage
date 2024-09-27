@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+
+body {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url("download (1).jpeg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(3px); /* Add this line to blur the background image */
+  z-index: -1; /* Add this line to send the background layer behind the content */
+}
+
+.container {
+  height: 400px;
+  width: 350px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255, 0.1);
+}
+
+section {
+  position: relative;
+  max-width: 400px;
+  background-color: transparent;
+  border: 3px solid rgb(255, 255, 255, 0.5);
+  backdrop-filter: blur(55px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 3rem;
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.inputBox {
+  position: relative;
+  margin: 30px;
+  max-width: 310px;
+}
+
+.inputBox input {
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 0 40px 0 10px;
+  font-size: 1.2rem;
+}
+
+.inputBox img {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.inputBox label {
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  color: #0a0a0a;
+  font-size: 1.2rem;
+  pointer-events: none;
+  transition: all 0.5s ease-in-out;
+}
+
+.inputBox input:focus + label,
+.inputBox input:valid + label {
+  top: -20px;
+  font-size: 0.8rem;
+}
+
+.inputBox input:focus,
+.inputBox input:valid {
+  border-bottom: 2px solid #fff;
+}
+
+label[for="remember"] {
+  margin: 30px 0 10px;
+  font-size: 0.85rem;
+  color: #fff;
+  display: block;
+}
+
+.login-btn {
+  width: 90%;
+  height: 50px;
+  border-radius: 40px;
+  background-color: rgb(255, 255, 255, 1);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: all 0.4s ease;
+  margin-top: 20px;
+}
+
+.login-btn:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  color:blueviolet;
+  font-size: large;
+}
+
+
+#email,
+#password {
+  width: 230px;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.4rem;
+  transition: all 0.4s ease;
+}
+
+#email::placeholder,
+#password::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.inputBox img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -40px;
+  width: 25px;
+  height: 25px;
+  margin-left: 0;
+  filter: invert(1);
+}
+
+.inputBox {
+  position: relative;
+  margin: 30px;
+  max-width: 310px;
+  padding-right: 60px;
+}
